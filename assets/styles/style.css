@@ -1,0 +1,637 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li {
+    font-family: "Mukta Mahee", arial, sans-serif;
+}
+
+/* -- General Rules -- */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    direction: ltr;
+    margin: 0;
+}
+
+::selection {
+    color: #fff;
+    background: #65c0ba;
+}
+
+a {
+    color: #65c0ba;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mainmenu {
+    display: none;
+}
+
+#mainmenu:target {
+    display: block;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+/* -- Header Section -- */
+
+.header {
+    position: absolute;
+    top: 0;
+    padding: 60px 0;
+    width: 100%;
+    z-index: 90;
+}
+
+.header .menu-button {
+    width: 40px;
+    height: 40px;
+    padding-right: 15px;
+    margin-right: 15px;
+    position: relative;
+}
+
+.header .menu-button span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    border-radius: 9px;
+}
+
+.header .menu-button span:nth-child(1) {
+    top: 10px;
+}
+
+.header .menu-button span:nth-child(2) {
+    top: 20px;
+}
+
+.header .menu-button span:nth-child(3) {
+    top: 30px;
+}
+
+.header .title {
+    padding-left: 15px;
+}
+
+.header .title a h1 {
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    font-family: "Abril Fatface", times, serif;
+    margin: 0;
+}
+
+/* -- Main Menu Section -- */
+
+.mainmenu {
+    position: fixed;
+    z-index: 100;
+    height: 100vh;
+    width: 100vw;
+    background: #fff;
+}
+
+.mainmenu ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+    line-height: 1.8;
+}
+
+.mainmenu ul li a {
+    color: #000;
+    font-size: 40px;
+    padding: 5px 10px;
+    position: relative;
+    font-family: "Abril Fatface", times, serif;
+}
+
+.mainmenu ul li a:hover {
+    color: #65c0ba;
+}
+
+/* -- Hero Section -- */
+
+.hero {
+    background-image: url(../images/hero.webp);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    position: relative;
+    background-position: center center;
+}
+
+.hero::before {
+    background: black;
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.hero h2 {
+    font-size: 80px;
+    font-family: "Abril Fatface", times, serif;
+    color: #fff;
+    line-height: 1;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    font-size: 30px;
+    font-weight: 200;
+    color: #fff;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 56px;
+}
+
+.hero p a {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.hero p a:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.hero .hero-button {
+    font-size: 15px;
+    letter-spacing: .2em;
+    color: #f8f9fa;
+    background-color: transparent;
+    border: 2px solid #f8f9fa;
+    font-weight: 400;
+    text-align: center;
+    padding: 16px 30px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: all 0.15s;
+}
+
+.hero .hero-button:hover {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+.hero .scroll-button a {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 200;
+    line-height: 1.8;
+}
+
+.hero .scroll-button span {
+    transform: rotate(90deg);
+    font-size: 13px;
+    display: block;
+}
+
+/* -- Welcome Section -- */
+
+.welcome {
+    padding: 128px 0;
+}
+
+.welcome .welcome-image {
+    width: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.welcome .welcome-image img {
+    width: 100%;
+    height: auto;
+}
+
+.welcome .welcome-message {
+    width: 50%;
+    padding-left: 48px;
+    padding-right: 15px;
+}
+
+.welcome .welcome-message h3 {
+    color: #000;
+    font-family: "Abril Fatface", times, serif;
+    font-size: 32px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.welcome .welcome-message p {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #6c757d;
+    margin-bottom: 16px;
+}
+
+.welcome .welcome-message .welcome-button {
+    padding-top: 24px;
+}
+
+.welcome .welcome-message .welcome-button .icon {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border: 2px solid #e6e6e6;
+    border-radius: 50%;
+    margin-right: 16px;
+    transition: .3s all ease;
+}
+
+.welcome .welcome-message .welcome-button:hover .icon {
+    border-color: #1a1a1a;
+}
+
+.welcome .welcome-message .welcome-button .icon span {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s;
+}
+
+.welcome .welcome-message .welcome-button:hover .icon span {
+    color: #1a1a1a;
+}
+
+.welcome .welcome-message .welcome-button .text {
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: 18px;
+    font-weight: bold;
+    align-self: center;
+}
+
+.welcome .welcome-message .welcome-button a:hover .text {
+    color: #3f9a94;
+}
+
+/* -- Experience Section -- */
+.experience {
+    background: #fafafa;
+    border-top: 1px solid #e0e0e0;
+    padding: 126px 0;
+}
+
+.experience .experience-headings {
+    text-align: center;
+    margin-bottom: 48px;
+    width: 66.66%;
+}
+
+.experience .experience-headings h3 {
+    color: #000;
+    font-family: "Abril Fatface", times, serif;
+    font-size: 32px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.experience .experience-headings p {
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 16px;
+    line-height: 1.8;
+    color: #6c757d;
+}
+
+.experience .experience-list {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.experience .experience-list .experience-items {
+    width: 33.33%;
+    margin-bottom: 24px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.experience .experience-list .experience-items img {
+    width: 70px;
+    height: auto;
+    margin-bottom: 24px;
+
+}
+
+.experience .experience-list .experience-items h4 {
+    color: #000;
+    font-family: "Abril Fatface", times, serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.experience .experience-list .experience-items p {
+    font-size: 18px;
+    font-weight: 200;
+    margin-top: 0;
+    margin-bottom: 16px;
+    line-height: 1.8;
+    color: #6c757d;
+}
+
+/* -- Gallery Section -- */
+
+.gallery {
+    padding: 126px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-background {
+    z-index: -1;
+    position: absolute;
+    background: #65c0ba;
+    width: 150%;
+    height: 30%;
+    left: -25px;
+    bottom: -35px;
+    transform: rotate(-4deg);
+}
+
+.gallery .gallery-headings {
+    text-align: center;
+    margin-bottom: 48px;
+    width: 66.66%;
+    margin: auto;
+}
+
+.gallery .gallery-headings h2 {
+    font-size: 70px;
+    font-family: "Abril Fatface", times, serif;
+    font-weight: 500;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.gallery .gallery-headings p {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #6c757d;
+    padding-bottom: 16px;
+    margin-top: 0;
+
+}
+
+.gallery .album {
+    position: relative;
+}
+
+.gallery .album-items {
+    width: 1110px;
+    margin: auto;
+}
+
+.gallery .album-items img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery .album .album-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 48px;
+}
+
+.gallery .album .album-nav .fa-solid.fa-chevron-left {
+    position: absolute;
+    left: -60px;
+    color: #495057;
+    transition: all .3s;
+}
+
+.gallery .album .album-nav .fa-solid.fa-chevron-right {
+    position: absolute;
+    right: -60px;
+    color: #495057;
+    transition: all .3s;
+}
+
+.gallery .album .album-nav .fa-solid.fa-chevron-left:hover,
+.gallery .album .album-nav .fa-solid.fa-chevron-right:hover {
+    color: #6c757d;
+    cursor: pointer;
+}
+
+.gallery .album .bullet-circles {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.gallery .album .bullet-circles .bullet-item{
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+    background: #fff;
+}
+
+.gallery .album .bullet-circles .bullet-item a{
+    display: block;
+  width: 10px;
+  height: 10px;
+  transform: translate(-20%, -20%);
+  border-radius: 50%;
+}
+
+.gallery .album .bullet-circles .bullet-item.active {
+    border: 2px solid white;
+    background: none;
+}
+
+/* -- Blog Section -- */
+
+.blog {
+    padding: 126px 0;
+    background: #65c0ba;
+    position: relative;
+}
+
+.blog .blog-headings {
+    text-align: center;
+    margin-bottom: 48px;
+    width: 66.66%;
+    margin: auto;
+}
+
+.blog .blog-headings h2 {
+    font-size: 70px;
+    font-family: "Abril Fatface", times, serif;
+    font-weight: 500;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.blog .blog-headings p {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.7);
+    padding-bottom: 16px;
+    margin-top: 0;
+}
+
+.blog .post-block {
+    width: 33.33%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.blog .post-block .post-content {
+    background: #fff;
+}
+
+.blog .post-block .post-content img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+.blog .post-block .post-content .post-text {
+    padding: 10px 30px;
+}
+
+.blog .post-block .post-content .post-text .meta-date {
+    color: #ced4da;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.blog .post-block .post-content .post-text .post-title {
+    font-family: "Abril Fatface", times, serif;
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    margin-top: 0;
+    color: #000;
+    transition: all 0.3s;
+}
+
+.blog .post-block .post-content .post-text .post-title:hover {
+    color: #65c0ba;
+}
+
+.blog .post-block .post-content .post-text .post-excerpt {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #6c757d;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+/* -- Responsive Mode -- */
+
+@media (max-width:1200px) {
+    
+}
